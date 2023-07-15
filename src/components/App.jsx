@@ -36,7 +36,7 @@ export class App extends PureComponent {
       }));
       img[0].total = data[0].total;
       this.setState({ img: img });
-    } catch (error) {
+    } catch (e) {
       this.setState({ error: 'There is no such images' });
     } finally {
       this.setState({ isLoading: false });
