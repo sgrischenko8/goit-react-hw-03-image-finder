@@ -14,7 +14,7 @@ export class App extends PureComponent {
 
   componentDidUpdate = async (prevProps, prevState) => {
     if (prevState.query !== this.state.query) {
-      this.setState({ error: '' });
+      this.setState(pervState => ({ ...pervState, img: [], error: '' }));
       await this.renderImages(this.state.query);
     }
   };
