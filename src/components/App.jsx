@@ -15,11 +15,11 @@ export class App extends PureComponent {
   componentDidUpdate = async (prevProps, prevState) => {
     if (prevState.query !== this.state.query) {
       this.setState({ error: '' });
-      this.renderImages(this.state.query);
+      await this.renderImages(this.state.query);
     }
   };
 
-  submitHandler = async query => {
+  submitHandler = query => {
     this.setState({ query });
   };
 

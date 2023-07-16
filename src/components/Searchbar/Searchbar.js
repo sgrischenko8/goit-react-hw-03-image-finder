@@ -4,9 +4,9 @@ import styles from './Searchbar.module.css';
 import { ReactComponent as SearchIcon } from '../../icons/search.svg';
 
 export const Searchbar = ({ onSubmit }) => {
-  const handleSubmit = async (values, action) => {
+  const handleSubmit = (values, action) => {
     if (values.query.trim() !== '') {
-      await onSubmit(values.query);
+      onSubmit(values.query);
       action.setSubmitting(false);
     }
   };
